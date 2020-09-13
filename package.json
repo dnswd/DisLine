@@ -1,0 +1,27 @@
+{
+  "name": "disline",
+  "version": "1.0.0",
+  "description": "Announcement and Ticketing system between Discord and Line Messenger",
+  "main": "index.js",
+  "dependencies": {
+    "@line/bot-sdk": "^7.0.0",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnswd/DisLine.git"
+  },
+  "author": "Dennis Walangadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dnswd/DisLine/issues"
+  },
+  "homepage": "https://github.com/dnswd/DisLine#readme"
+}
