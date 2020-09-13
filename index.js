@@ -21,7 +21,7 @@ client.on('message', async (message) => {
   if (message.content.startsWith(PREFIX)) {
     const [cmd, ...args] = message.content.trim().substring(1).split(/\s+/);
     
-    console.log("prefix command", cmd); //(debug)
+    console.log("DISCORD:", message.author.tag,  cmd, args);
 
     /**
      * Commands starts here
@@ -35,8 +35,8 @@ client.on('message', async (message) => {
     /** Check bot's latency */
     if (cmd === "latency") {
       var now = new Date();
-      var latency = now.getTime - message.createdAt.getTime();
-      message.reply(`There are ${latency} ms, between you and the bot.`)
+      var latency = now.getTime() - message.createdAt.getTime();
+      message.reply(`There are ${latency}ms latency between you and me.`)
     }
 
     /** Change bot prefix */
