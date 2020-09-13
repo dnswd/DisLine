@@ -15,7 +15,7 @@ client.on('message', async (message) => {
   
   if (message.channel.id === BEACON_CHANNEL) {
     // Push message to Line Bot
-    comsole.log("Line:", message.content);
+    console.log("Line:", message.content);
   }
 
   if (message.content.startsWith(PREFIX)) {
@@ -27,14 +27,24 @@ client.on('message', async (message) => {
      * Commands starts here
      */
 
+    /** Ping the bot */
     if (cmd.toLocaleLowerCase() === "ping") {
       message.reply('Pong!');
     }
+
+    /** Check bot's latency */
+    if (cmd === "latency") {
+      var now = new Date();
+      var latency = now.getTime - message.createdAt.getTime();
+      message.reply(`There are ${latency} ms, between you and the bot.`)
+    }
+
     /** Change bot prefix */
     if (cmd === "prefix") {
       if (args.length != 0) PREFIX = args[0];
     }
 
+    /** Puts beacon on a channel */
     if (cmd === "beacon" && message.channel.type === 'text') {
       BEACON_CHANNEL = message.channel.id;
     }
