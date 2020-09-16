@@ -19,7 +19,10 @@ client.on('message', async (message) => {
   }
 
   if (message.content.startsWith(PREFIX)) {
-    const [cmd, ...args] = message.content.trim().substring(1).split(/\s+/);
+    const [cmd, ...args] = message.content
+      .trim()
+      .substring(1)
+      .split(/\s+/);
     
     console.log("DISCORD:", message.author.tag,  cmd, args);
 

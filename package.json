@@ -6,13 +6,15 @@
   "dependencies": {
     "@line/bot-sdk": "^7.0.0",
     "discord.js": "^12.3.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "line.js": "^4.3.11"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node ln.js",
+    "dev": "nodemon ln.js"
   },
   "repository": {
     "type": "git",
